@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\ModelFlags\Models\Flag;
 
-/** @mixin \Illuminate\Database\Eloquent\Model */
+/**
+ * @method static self notFlagged(string $name)
+ * @method static self flagged(string $name)
+ * @mixin \Illuminate\Database\Eloquent\Model
+ */
 trait HasFlags
 {
     public function flags(): MorphMany
